@@ -1,0 +1,138 @@
+
+
+.text{
+    font-size: 50px;
+    color: white;
+    font-weight: normal;
+}
+
+.mainText{
+    font-size: 25px;
+    text-align: right;
+    padding-right: 25px;
+    border-bottom: 5px;
+    color: white;
+}
+
+
+#bg{
+    background-color: red;
+    width: 100%;
+    font-size: 50px;
+    padding: 0;
+    margin: 0;
+}
+
+#white{
+    background-color: white;
+}
+#signin{
+    height: 45px;
+}
+
+.hbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+.item{
+    text-align: center;
+}
+
+.search-container{
+    display: flex;
+    align-items: center;
+    border: 2px solid;
+    border-radius: 20px;
+    background-color: white;
+    width: 100%;
+    
+}
+.search-input{
+    border: none;
+    border-radius: 20px;
+    padding-left: 20px;
+    width: 100%;
+}
+
+.search-button {
+    background-color:  #00274c;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.tabBar{
+    height: 45px;
+    background-color:  #00274c;
+    margin-top: 20px;
+}
+
+.vBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+.navbar {
+    background-color: #00274c;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px 0;
+}
+
+#bodyStuff{
+    background-color: white;
+    flex-grow: 1;
+    height: 700px;
+}
+
+.bodyContainer{
+    border-color: #00274c;
+    background-color: aqua;
+    height: 200px;
+    margin-top: 20px;
+    fill: none;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-left: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    border-radius: 5px;
+}
+.bodyItem{
+    display: flex;
+    justify-content: space-evenly;
+    padding-right: 10px;
+    align-items: center;
+}
+
+.bodyText{
+    padding-right: 20px;
+    padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+    font-size: 60px;
+}
+
+.extra-text{
+    display: none;
+}
+.bodyContainer:hover{
+    background-color: rgb(38, 204, 204); 
+}
+.bodyContainer:hover .extra-text{
+    display: block;
+    font-size: 35px;
+    margin-bottom: 0px;
+    color: rgba(0, 0, 0, 0.722);
+}

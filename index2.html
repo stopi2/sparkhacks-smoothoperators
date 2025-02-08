@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Chatbot UI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button id="ai-button">
+        <div id="chat-container">
+        </div>
+    </button>
+    <!-- Welcome Modal -->
+    <div id="welcomeModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Hi! I'm Serafin, welcome to our chat service!</p>
+        </div>
+    </div>
+    <!-- Text Field Modal (Updated to include message container) -->
+    <div id="textFieldModal" class="modal">
+        <div class="modal-content">
+            <span class="close-text-field">&times;</span>
+            <input type="text" id="dynamic-input" class="message-input" placeholder="Type your message...">
+            <button class="send-button" onclick="sendDynamicMessage()">Send</button>
+            <div id="dynamic-messages"></div> <!-- New container to display links -->
+        </div>
+    </div>
+
+    <!-- Text Field Modal (Initially hidden) -->
+    <div id="textFieldModal" class="modal">
+        <div class="modal-content">
+            <span class="close-text-field">&times;</span>
+            <input type="text" id="dynamic-input" class="message-input" placeholder="Type your message...">
+            <button class="send-button" onclick="sendDynamicMessage()">Send</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+/* General Styles for the Chat Container */
+#chat-container {
+    width: 300px;
+    height: 300px;
+    border: 2px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #f9f9f9 url('photos/ai.jpeg') no-repeat center center;
+    background-size:295px;
+    border-radius: 50%;
+    overflow: hidden;
+    padding: 15px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+#ai-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    width: 300px; /* match the size of chat-container */
+    height: 300px; /* match the size of chat-container */
+    border-radius: 100%; /* match the shape of chat-container */
+    border-color: green;
+    overflow: hidden; /* to prevent any overflow */
+    box-shadow: 0 0 10px #ccc;
+    z-index: 1000;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 29%;
+    margin-left: 73%;
+    padding: 10px; /* Reduced padding from 20px to 10px */
+    border: 1px solid #888;
+    width: 25%;
+    box-shadow: 0 5px 8px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.close, .close-text-field {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close-text-field:hover,
+.close:focus, .close-text-field:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#dynamic-input, #textFieldModal button {
+    width: 80%;
+    padding: 8px;
+    margin: 10px;
+    display: ruby-text;
+}
+
+
+.message-input {
+    width: calc(100% - 90px); /* Adjusts width to leave space for the button */
+    padding: 10px;
+    margin: 5px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px; /* Increased font size for better readability */
+    display: inline-block; /* Ensures it's inline with the send button */
+}
+
+.send-button {
+    width: 80px; /* Sufficient width for the text 'Send' */
+    padding: 10px;
+    margin: 5px;
+    background-color: #007bff; /* Bright blue for visibility */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block; /* Aligns it with the input field */
+}
+
+.send-button:hover {
+    background-color: #0056b3; /* Darker blue for hover effect */
+}

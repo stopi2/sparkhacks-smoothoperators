@@ -1,0 +1,160 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Light & Dark Mode */
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+    background-color: #1e1e1e;
+    color: #f4f4f4;
+}
+
+/* Top Sign-in Bar */
+#signin {
+    background: #00274c;
+    color: white;
+    padding: 10px 20px;
+    text-align: right;
+    font-size: 14px;
+}
+
+/* Navbar */
+.navbar {
+    background: #003366;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+    transition: background 0.3s;
+}
+
+.nav-links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+/* Search Bar */
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.search-input {
+    width: 300px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+}
+
+.search-button {
+    background: #0056b3;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background: #003d82;
+}
+
+/* Main Content */
+#bodyStuff {
+    background-color: white;
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 30px;
+    max-width: 1100px;
+    margin: auto;
+    height: auto;
+}
+
+/* Cards */
+.bodyContainer {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+    cursor: pointer;
+}
+
+.bodyContainer:hover {
+    transform: translateY(-5px);
+    background-color: rgb(38, 204, 204);
+}
+
+/* Icons */
+.bodyContainer i {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #003366;
+}
+
+.bodyText {
+    font-size: 20px;
+    font-weight: bold;
+    color: #003366;
+    padding: 10px 0;
+}
+
+.extra-text {
+    font-size: 14px;
+    color: #555;
+    display: none;
+}
+
+.bodyContainer:hover .extra-text {
+    display: block;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.722);
+}
+
+/* Dark Mode Adjustments */
+.dark-mode .bodyContainer {
+    background: #333;
+    box-shadow: none;
+}
+
+.dark-mode .bodyText {
+    color: white;
+}
+
+.dark-mode .search-input {
+    background: #333;
+    color: white;
+    border: 2px solid #555;
+}

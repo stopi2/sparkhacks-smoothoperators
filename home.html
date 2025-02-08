@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My JavaScript Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body id = "bg">
+    <div id = "signin">
+        <div class = "mainText"> You are signed in randomName</div>
+    </div>
+    <!-- ends of sign in -->
+     <div class = "vbox">
+        <div class="item">
+            <div class = "text"> myUIC</div>
+        </div>
+        <div class="search-container">
+            <input type = "text" class = search-input placeholder="Search...">
+            <button class ="search-button"> Search</button>
+        </div>
+     </div>
+     <!-- End of header -->
+      <div class=" tabBar">
+        <div class = "navbar">
+            <button id = "homeButton">Home</button>
+            <button id = "studentButton">Student</button>
+            <button onclick="changeContent('financial')">Financial</button>
+        </div>
+      </div>
+      <!-- end of tabs -->
+      <div id = "bodyStuff">
+        <div class="bodyContainer">
+            <div class = bodyItem>
+                Student records
+            </div>
+        </div>
+        <div class="bodyContainer" onclick = "window.location.href='https://uic.blackboard.com/';">
+            <div class = bodyItem>
+                <img src= "photos/blackboardlearn_logo.jpg" alt="blackboard" width="200" height="200">
+                <div class = "bodyText"> blackboard</div>
+                <div class = "extra-text"> View my Courses</div>
+            </div>    
+        </div>
+        <div class="bodyContainer" onclick = "window.location.href= 'https://paymybill.uillinois.edu/Access/';">
+            <div class = bodyItem>
+                <img src= "photos/Screenshot 2025-02-08 093746.png" alt="payMyBill" width="200" height="200">
+                <div class = "bodyText"> Pay my Bill </div>
+                <div class = "extra-text"> View Payment Deadlines</div>
+            </div>    
+            
+        </div>
+
+      </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

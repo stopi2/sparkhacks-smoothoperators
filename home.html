@@ -9,33 +9,41 @@
 
 <body id = "bg">
     <div id = "signin">
-        <div class = "mainText"> You are signed in randomName</div>
+        <div class = "mainText"> You are signed in Serafin</div>
     </div>
     <!-- ends of sign in -->
-     <div class = "vbox">
-        <div class="item">
-            <div class = "text"> myUIC</div>
-        </div>
-        <div class="search-container">
-            <input type = "text" class = search-input placeholder="Search...">
-            <button class ="search-button"> Search</button>
-        </div>
-     </div>
+     
      <!-- End of header -->
-      <div class=" tabBar">
+      
+     <div class=" tabBar">
         <div class = "navbar">
-            <button id = "homeButton">Home</button>
-            <button id = "studentButton">Student</button>
-            <button onclick="changeContent('financial')">Financial</button>
+            <div id = "homeButton"><div class = "text">Home</div></div>
+            <div id = "studentButton"><div class = "text">Student</div></div>
         </div>
       </div>
+
+      <div class="search-container">
+        <input type = "text" class = search-input placeholder="Search...">
+        <button class ="search-button"> Search</button>
+      </div>
+
+
+      <!-- after the tabs bar -->
+
+      
+
+    
+
       <!-- end of tabs -->
       <div id = "bodyStuff">
-        <div class="bodyContainer">
-            <div class = bodyItem>
-                Student records
-            </div>
+        <div class = "bodyContainer">
+        <div class = bodyItem>
+            <img src= "photos/584688.jpg" alt="blackboard" width="200" height="200">
+            <div class = "bodyText"> Student Records</div>
+            <div class = "extra-text"> View my Courses</div>
         </div>
+        </div>
+
         <div class="bodyContainer" onclick = "window.location.href='https://uic.blackboard.com/';">
             <div class = bodyItem>
                 <img src= "photos/blackboardlearn_logo.jpg" alt="blackboard" width="200" height="200">
@@ -45,8 +53,8 @@
         </div>
         <div class="bodyContainer" onclick = "window.location.href= 'https://paymybill.uillinois.edu/Access/';">
             <div class = bodyItem>
-                <img src= "photos/Screenshot 2025-02-08 093746.png" alt="payMyBill" width="200" height="200">
-                <div class = "bodyText"> Pay my Bill </div>
+                <img src= "photos/my-leave-record8.webp" alt="blackboard" width="200" height="200">
+                <div class = "bodyText"> Bursar </div>
                 <div class = "extra-text"> View Payment Deadlines</div>
             </div>    
             

@@ -179,4 +179,17 @@ body.dark-mode {
     padding-right: 40px;
 }
 
+.textnew {
+    font-size: 50px;
+    color: black;
+    display: flex;
+    justify-content: center;  /* Horizontally center */
+    align-items: center;      /* Vertically center */
+    height: 100%; 
+    padding-top: 40px;
+    padding-bottom: 40px; 
+    font-family: 'Sentinel'           /* Ensure the element has enough height */
+}
+
 /* ---------------------------------------- */
+

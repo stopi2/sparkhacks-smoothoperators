@@ -4,12 +4,47 @@ document.getElementById('homeButton').addEventListener('click', home);
 document.getElementById('studentButton').addEventListener('click', student);
 document.getElementById('giveUserInfoButton').addEventListener('click', giveUserInfo);
 
-const viewed = new Map();
-let value = 1;
+
 
 
 
 function home(){
+    let advertise = [];
+    fetch('Searches.txt')
+        .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.text();  // Read the file as text
+    })
+    .then(data => {
+        const fileContent = document.getElementById('displaytxt');
+        fileContent.textContent = data;  // Display the content in the <pre> element
+        //split the text
+
+        advertise = data;
+        handleAdvertise(advertise);
+
+    })
+    .catch(error => {
+        console.error('There was a problem with the fetch operation:', error);
+    });
+
+    
+    // const reader = new FileReader();
+    // const fileContent = document.getElementById("displaytxt");
+    // const file = "Searches.txt";
+
+    // reader.onload = function(e) {
+    // // Update the display area with the content
+    // fileContent.textContent = e.target.result;
+
+    // // Log the content AFTER it's been updated
+    // };
+
+    
+
+
     //check if exists
     if (document.getElementById('homePageContent')){
         return;
@@ -50,6 +85,46 @@ function home(){
     divContent.append(homePage); 
     
     // Attach an event listener to the dynamically created button    
+}
+
+function handleAdvertise(picks){
+    let ad = [];
+    const lines = picks.split('\n');
+    lines.forEach(line => {
+    
+        // You can add further processing logic here
+        // For example, use regex to extract 'name' and 'value' if needed
+        const match = line.match(/^\('([^']+)',\s*(\d+)\)$/);
+        if (match) {
+            const name = match[1];
+            const value = parseInt(match[2], 10);
+            ad.push({name, value});
+        }
+    });
+    if (ad[0].name == "Financial Aid"){
+        printFinancialAd();
+        console.log("inside");
+    }
+    
+
+    
+    
+}
+
+
+
+function printFinancialAd(){
+    const homePage = document.createElement('div');
+    homePage.id = 'financialContent';
+    const newBody = `
+    <div class="textnew">
+        Sign up for graduation.
+    </div>
+    `;
+    homePage.innerHTML = newBody;
+    const divContent = document.getElementById('displaytxt');
+    divContent.innerHTML = '';
+    divContent.append(homePage); 
 }
 
 function student(){
@@ -186,3 +261,6 @@ function student(){
 function giveUserInfo(){
 
 }
+
+
+
